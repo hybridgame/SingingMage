@@ -1,0 +1,88 @@
+// 2019-06-08
+// + Create git: https://github.com/hybridgame/SingingMage
+
+BACKUP ~s#mage/backup~
+AUTHOR ~hybridgame~
+VERSION "2019.06.08"
+
+LANGUAGE ~Korean~  ~Korean~ ~s#mage/Language/setupko.tra~
+
+BEGIN "Singing mage kit for Thief"
+INCLUDE "s#mage/lib/fl#add_kit_ee.tpa"
+
+// Add kit
+ADD_KIT ~s#mage~
+    // CLASWEAP.2DA : BG1 proficiencies. (deprecated)
+    ~s#mage   1 1 1 1 1 1 1 1~
+    
+    // WEAPPROF.2DA : BG2 proficiencies
+    ~s#mage   1 1 0 1 1 0 0 0 0 1 1 0 0 1 1 1 0 0 0 0 0 0 1 1 0 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0~
+    
+    // ABCLASRQ.2DA : Minimum stats at character creation
+    ~s#mage   16 18 16 18 16 10~
+    
+    // ABCLSMOD.2DA : Stat modifiers at character creation
+    ~s#mage   0 0 0 0 0 0~
+    
+    // ABDCDSRQ.2DA : Stats requirement to dual-class
+    ~s#mage   0 17 0 0 0 0~
+    
+    // ABDCSCRQ.2DA : Stats requirement to dual-class
+    ~s#mage   0 0 0 17 0 0~
+    
+    //        LG LN LE NG TN NE CG CN CE ALIGNMNT.2DA : Selectable alignment
+    ~s#mage   0  1  1  1  1  1  1  1  1~
+    
+    //        F C M T D R DUALCLAS.2DA : Dual possible classes
+    ~s#mage   0 0 1 0 0 0~
+    
+    // Kit's own clab*.2da
+    ~s#mage/2da/s#mage.2da~
+    
+    // KITTABLE.2DA : Selectable race
+    ~K_T_H K_T_E K_T_HE~
+    
+    // KITLIST.2DA : Kit's usability flag
+    ~0x00080000 4~
+    
+    // High level abilities. prefix lu file required
+    ~Th0~
+    
+    // 25stweap.2da : TOB starting items
+    ~* * * * * * * * * * * * * * * * * * * *~
+    
+    // Lowercase name
+    SAY @1
+    
+    // First uppercase name
+    SAY @1
+    
+    // Description
+    SAY @2
+
+// Kit detail
+LAF fl#add_kit_ee
+    STR_VAR
+        kit_name = ~s#mage~
+        hpclass = ~HPROG~
+END
+
+COMPILE ~s#mage/baf~
+
+// Change script (race)
+COPY ~s#mage/spl/s#mage1.spl~ ~override~
+// Protection from maze, always casting/theiving, add +1 APR
+COPY ~s#mage/spl/s#mage2.spl~ ~override~
+// Bard song
+COPY ~s#mage/spl/s#mage3.spl~ ~override~
+
+COPY ~s#mage/itm/s#mage1.itm~ ~override~
+SAY NAME2 @3 SAY DESC @4
+COPY ~s#mage/itm/s#mage2.itm~ ~override~
+SAY NAME2 @5 SAY DESC @6
+COPY ~s#mage/itm/s#mage3.itm~ ~override~
+SAY NAME2 @7 SAY DESC @8
+COPY ~s#mage/itm/s#mage4.itm~ ~override~
+SAY NAME2 @9 SAY DESC @10
+COPY ~s#mage/itm/s#mage5.itm~ ~override~
+SAY NAME2 @11 SAY DESC @12
