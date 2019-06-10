@@ -7,13 +7,12 @@ THEN
         SetInterrupt(FALSE)
 		ChangeClass(Myself,MAGE_THIEF)
         ChangeStat(Myself,MAXHITPOINTS,-4,ADD)
-		ApplySpellRES("S#MAGE2",Myself)  // No such index
         ApplySpellRES("S#MAGE3",Myself)
         AddSpecialAbility("SPWI106")  // 실명
 		AddSpecialAbility("SPWI110")  // 식별
 		AddSpecialAbility("SPWI112")  // 마법 화살
 		AddSpecialAbility("SPWI116")  // 수면
-        SetInterrupt (TRUE)
+        SetInterrupt(TRUE)
 END
 
 IF
@@ -26,7 +25,6 @@ THEN
 		ChangeClass(Myself,MAGE_THIEF)
         ChangeStat(Myself,MAXHITPOINTS,-14,ADD)
         ChangeStat(Myself,LEVEL2,6,SET)
-		ApplySpellRES("S#MAGE2",Myself)  // No such index
 		AddSpecialAbility("SPWI106")  // 실명
 		AddSpecialAbility("SPWI110")  // 식별
 		AddSpecialAbility("SPWI112")  // 마법 화살
@@ -42,16 +40,19 @@ THEN
 		AddSpecialAbility("SPWI408")  // 돌 피부
 		AddSpecialAbility("SPWI412")  // 상급 저주
 		AddSpecialAbility("SPWI508")  // 혼돈
-        SetInterrupt (TRUE)
+        SetInterrupt(TRUE)
 END
 
 IF
 	AreaCheck("AR0602")
-	Global("SingingMageBG2BardSong","LOCALS",0)
+	Joins("IMOEN")
+	Global("SingingMageBG2BardSong","GLOBAL",0)
 THEN
 	RESPONSE #100
-		SetGlobal("SingingMageBG2BardSong","LOCALS",1)
+	    SetInterrupt(FALSE)
 		ApplySpellRES("S#MAGE3",Myself)  // 싱잉 메이지 바드송
+		SetGlobal("SingingMageBG2BardSong","GLOBAL",1)
+		SetInterrupt(TRUE)
 END
 
 IF
