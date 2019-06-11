@@ -44,9 +44,9 @@ THEN
 END
 
 IF
+	Global("SingingMageBG2BardSong","GLOBAL",0)
 	AreaCheck("AR0602")
 	Joins("IMOEN")
-	Global("SingingMageBG2BardSong","GLOBAL",0)
 THEN
 	RESPONSE #100
 	    SetInterrupt(FALSE)
