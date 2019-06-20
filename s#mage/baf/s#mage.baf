@@ -6,7 +6,9 @@ THEN
 	RESPONSE #100
         SetInterrupt(FALSE)
 		ChangeClass(Myself,MAGE_THIEF)
-        ChangeStat(Myself,MAXHITPOINTS,-4,ADD)
+        ChangeStat(Myself,MAXHITPOINTS,-3,ADD)
+		ChangeStat(Myself,LEVEL,0,SET)
+		ChangeStat(Myself,LEVEL2,1,SET)
         ApplySpellRES("S#MAGE3",Myself)
         AddSpecialAbility("SPWI106")  // 실명
 		AddSpecialAbility("SPWI110")  // 식별
@@ -23,8 +25,9 @@ THEN
 	RESPONSE #100
         SetInterrupt(FALSE)
 		ChangeClass(Myself,MAGE_THIEF)
-        ChangeStat(Myself,MAXHITPOINTS,-14,ADD)
-        ChangeStat(Myself,LEVEL2,6,SET)
+        ChangeStat(Myself,MAXHITPOINTS,-24,ADD)
+		ChangeStat(Myself,LEVEL,0,SET)
+        ChangeStat(Myself,LEVEL2,8,SET)
 		AddSpecialAbility("SPWI106")  // 실명
 		AddSpecialAbility("SPWI110")  // 식별
 		AddSpecialAbility("SPWI112")  // 마법 화살

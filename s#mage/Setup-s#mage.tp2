@@ -5,7 +5,9 @@ BACKUP ~s#mage/backup~
 AUTHOR ~hybridgame~
 VERSION "2019.06.08"
 
-LANGUAGE ~Korean~  ~Korean~ ~s#mage/Language/setupko.tra~
+LANGUAGE    ~Korean~
+            ~Korean~
+            ~s#mage/Language/setupko.tra~
 
 BEGIN "Singing mage kit for Thief"
 INCLUDE "s#mage/lib/fl#add_kit_ee.tpa"
@@ -69,12 +71,9 @@ END
 
 COMPILE ~s#mage/baf~
 
-// Change script (race)
-COPY ~s#mage/spl/s#mage1.spl~ ~override~
-// Protection from maze, always casting/theiving, add +1 APR
-COPY ~s#mage/spl/s#mage2.spl~ ~override~
-// Bard song
-COPY ~s#mage/spl/s#mage3.spl~ ~override~
+COPY ~s#mage/spl/s#mage1.spl~ ~override~    // Change script (race)
+     ~s#mage/spl/s#mage2.spl~ ~override~    // Protection from maze, always casting/theiving, add +1 APR
+     ~s#mage/spl/s#mage3.spl~ ~override~    // Bard song
 
 COPY ~s#mage/itm/s#mage1.itm~ ~override~
 SAY NAME2 @3 SAY DESC @4
