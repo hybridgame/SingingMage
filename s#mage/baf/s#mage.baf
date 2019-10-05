@@ -42,13 +42,14 @@ THEN
 		AddSpecialAbility("SPWI405")  // 향상된 투명화
 		AddSpecialAbility("SPWI408")  // 돌 피부
 		AddSpecialAbility("SPWI412")  // 상급 저주
+		AddSpecialAbility("SPWI502")  // 살인 구름
 		AddSpecialAbility("SPWI508")  // 혼돈
         SetInterrupt(TRUE)
 END
 
 IF
-	Global("SingingMageBG2BardSong","GLOBAL",0)
 	AreaCheck("AR0602")
+	Global("SingingMageBG2BardSong","GLOBAL",0)
 	Global("NewGame","AR0602",1)
 THEN
 	RESPONSE #100
@@ -57,82 +58,3 @@ THEN
 		SetGlobal("SingingMageBG2BardSong","GLOBAL",1)
 		SetInterrupt(TRUE)
 END
-
-IF
-	CheckStatLT(Myself,6,LEVEL2)
-	!NumItemsParty("S#MAGE1",1)  // 싱잉 메이지 오브 +1
-THEN
-	RESPONSE #100
-		TakePartyItem("S#MAGE1")  // 싱잉 메이지 오브 +1
-		DestroyItem("S#MAGE1")  // 싱잉 메이지 오브 +1
-		DestroyItem("S#MAGE1")  // 싱잉 메이지 오브 +1
-		CreateItem("S#MAGE1",1,1,1)  // 싱잉 메이지 오브 +1
-END
-
-IF
-	CheckStatLT(Myself,11,LEVEL2)
-	CheckStatGT(Myself,5,LEVEL2)
-	!NumItemsParty("S#MAGE2",1)  // 싱잉 메이지 오브 +2
-THEN
-	RESPONSE #100
-		TakePartyItem("S#MAGE1")  // 싱잉 메이지 오브 +1
-		TakePartyItem("S#MAGE2")  // 싱잉 메이지 오브 +2
-		DestroyItem("S#MAGE1")  // 싱잉 메이지 오브 +1
-		DestroyItem("S#MAGE2")  // 싱잉 메이지 오브 +2
-		DestroyItem("S#MAGE2")  // 싱잉 메이지 오브 +2
-		CreateItem("S#MAGE2",1,1,1)  // 싱잉 메이지 오브 +2
-END
-
-IF
-	CheckStatLT(Myself,15,LEVEL2)
-	CheckStatGT(Myself,10,LEVEL2)
-	!NumItemsParty("S#MAGE3",1)  // 싱잉 메이지 오브 +3
-THEN
-	RESPONSE #100
-		TakePartyItem("S#MAGE1")  // 싱잉 메이지 오브 +1
-		TakePartyItem("S#MAGE2")  // 싱잉 메이지 오브 +2
-		TakePartyItem("S#MAGE3")  // 싱잉 메이지 오브 +3
-		DestroyItem("S#MAGE1")  // 싱잉 메이지 오브 +1
-		DestroyItem("S#MAGE2")  // 싱잉 메이지 오브 +2
-		DestroyItem("S#MAGE3")  // 싱잉 메이지 오브 +3
-		DestroyItem("S#MAGE3")  // 싱잉 메이지 오브 +3
-		CreateItem("S#MAGE3",1,1,1)  // 싱잉 메이지 오브 +3
-END
-
-IF
-	CheckStatLT(Myself,19,LEVEL2)
-	CheckStatGT(Myself,14,LEVEL2)
-	!NumItemsParty("S#MAGE4",1)  // 싱잉 메이지 오브 +4
-THEN
-	RESPONSE #100
-		TakePartyItem("S#MAGE1")  // 싱잉 메이지 오브 +1
-		TakePartyItem("S#MAGE2")  // 싱잉 메이지 오브 +2
-		TakePartyItem("S#MAGE3")  // 싱잉 메이지 오브 +3
-		TakePartyItem("S#MAGE4")  // 싱잉 메이지 오브 +4
-		DestroyItem("S#MAGE1")  // 싱잉 메이지 오브 +1
-		DestroyItem("S#MAGE2")  // 싱잉 메이지 오브 +2
-		DestroyItem("S#MAGE3")  // 싱잉 메이지 오브 +3
-		DestroyItem("S#MAGE4")  // 싱잉 메이지 오브 +4
-		DestroyItem("S#MAGE4")  // 싱잉 메이지 오브 +4
-		CreateItem("S#MAGE4",1,1,1)  // 싱잉 메이지 오브 +4
-END
-
-IF
-	CheckStatGT(Myself,18,LEVEL2)
-	!NumItemsParty("S#MAGE5",1)  // 싱잉 메이지 오브 +5
-THEN
-	RESPONSE #100
-		TakePartyItem("S#MAGE1")  // 싱잉 메이지 오브 +1
-		TakePartyItem("S#MAGE2")  // 싱잉 메이지 오브 +2
-		TakePartyItem("S#MAGE3")  // 싱잉 메이지 오브 +3
-		TakePartyItem("S#MAGE4")  // 싱잉 메이지 오브 +4
-		TakePartyItem("S#MAGE5")  // 싱잉 메이지 오브 +5
-		DestroyItem("S#MAGE1")  // 싱잉 메이지 오브 +1
-		DestroyItem("S#MAGE2")  // 싱잉 메이지 오브 +2
-		DestroyItem("S#MAGE3")  // 싱잉 메이지 오브 +3
-		DestroyItem("S#MAGE4")  // 싱잉 메이지 오브 +4
-		DestroyItem("S#MAGE5")  // 싱잉 메이지 오브 +5
-		DestroyItem("S#MAGE5")  // 싱잉 메이지 오브 +5
-		CreateItem("S#MAGE5",1,1,1)  // 싱잉 메이지 오브 +5
-END
-
