@@ -1,37 +1,54 @@
 IF
-	Class(Myself,THIEF)
+	Global("SMageMageThief","GLOBAL",0)
     CheckStat(Myself,1,LEVEL)
 	AreaCheck("AR2600")
 THEN
 	RESPONSE #100
         SetInterrupt(FALSE)
 		ChangeClass(Myself,MAGE_THIEF)
-        ChangeStat(Myself,MAXHITPOINTS,-3,ADD)
 		ChangeStat(Myself,LEVEL,0,SET)
 		ChangeStat(Myself,LEVEL2,1,SET)
+        ChangeStat(Myself,MAXHITPOINTS,-3,ADD)
         ApplySpellRES("S#MAGE3",Myself)
-        AddSpecialAbility("SPWI106")  // 실명
-		AddSpecialAbility("SPWI110")  // 식별
-		AddSpecialAbility("SPWI112")  // 마법 화살
-		AddSpecialAbility("SPWI116")  // 수면
+		SetGlobal("SMageMageThief","GLOBAL",1)
         SetInterrupt(TRUE)
 END
 
 IF
-	Class(Myself,THIEF)
+	Global("SMageMageThief","GLOBAL",0)
     CheckStat(Myself,8,LEVEL)
 	AreaCheck("AR0602")
 THEN
 	RESPONSE #100
         SetInterrupt(FALSE)
 		ChangeClass(Myself,MAGE_THIEF)
-        ChangeStat(Myself,MAXHITPOINTS,-24,ADD)
 		ChangeStat(Myself,LEVEL,0,SET)
         ChangeStat(Myself,LEVEL2,8,SET)
+        ChangeStat(Myself,MAXHITPOINTS,-24,ADD)
+		SetGlobal("SMageMageThief","GLOBAL",1)
+        SetInterrupt(TRUE)
+END
+
+IF
+	Global("SMageBG1Spell","GLOBAL",0)
+	Global("SMageMageThief","GLOBAL",1)
+THEN
+	RESPONSE #100
+		SetInterrupt(FALSE)
 		AddSpecialAbility("SPWI106")  // 실명
 		AddSpecialAbility("SPWI110")  // 식별
 		AddSpecialAbility("SPWI112")  // 마법 화살
 		AddSpecialAbility("SPWI116")  // 수면
+		SetGlobal("SMageBG1Spell","GLOBAL",1)
+		SetInterrupt(TRUE)
+END
+
+IF
+	Global("SMageBG2Spell","GLOBAL",0)
+	Global("SMageMageThief","GLOBAL",1)
+THEN
+	RESPONSE #100
+		SetInterrupt(FALSE)
 		AddSpecialAbility("SPWI206")  // 투명화
 		AddSpecialAbility("SPWI212")  // 허상 분신
 		AddSpecialAbility("SPWI215")  // 거미줄
@@ -44,17 +61,19 @@ THEN
 		AddSpecialAbility("SPWI412")  // 상급 저주
 		AddSpecialAbility("SPWI502")  // 살인 구름
 		AddSpecialAbility("SPWI508")  // 혼돈
-        SetInterrupt(TRUE)
+		SetGlobal("SMageBG2Spell","GLOBAL",1)
+		SetInterrupt(TRUE)
 END
 
 IF
-	AreaCheck("AR0602")
-	Global("SingingMageBG2BardSong","GLOBAL",0)
+	Global("SMageBardSong","GLOBAL",0)
 	Global("NewGame","AR0602",1)
+	Global("SMageMageThief","GLOBAL",1)
+	AreaCheck("AR0602")
 THEN
 	RESPONSE #100
 	    SetInterrupt(FALSE)
 		ApplySpellRES("S#MAGE3",Myself)  // 싱잉 메이지 바드송
-		SetGlobal("SingingMageBG2BardSong","GLOBAL",1)
+		SetGlobal("SMageBardSong","GLOBAL",1)
 		SetInterrupt(TRUE)
 END
