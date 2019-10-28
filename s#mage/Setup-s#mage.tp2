@@ -17,7 +17,7 @@
 
 BACKUP ~s#mage/backup~
 AUTHOR ~hybridgame~
-VERSION "2019.10.24"
+VERSION "2019.10.28"
 
 LANGUAGE    ~Korean~
             ~Korean~
@@ -51,7 +51,7 @@ LAF ADD_KIT_EX
     alignmnt      = ~0 1 1 1 1 1 1 1 1~
     // dualclas      = ~0 0 0 0 0 0~
     // luabbr        = ~FT0~
-    //stweap        = ~LEAT14 * HELM07 BAG25 RING06 RING31 CLCK02 BOOT02 AMUL19 BRAC16 BELT06 AROW11,40 DART02,40 DART03,20 POTN52,5 POTN04,2 POTN14,5 DAGG12 SW1H28 STAF08~
+    // stweap        = ~LEAT14 * HELM07 BAG25 RING06 RING31 CLCK02 BOOT02 AMUL19 BRAC16 BELT06 AROW11,40 DART02,40 DART03,20 POTN52,5 POTN04,2 POTN14,5 DAGG12 SW1H28 STAF08~
     clab_path     = ~override/s#mage.2DA~
     kittable      = ~K_MT_H K_MT_E K_MT_HE~
     base_class    = ~T~ // use thief base class for multiclass kit (can by overridden on a per CLAB entry basis; see entries in the CLAB table row "ABILITY4" above)
@@ -60,14 +60,14 @@ LAF ADD_KIT_EX
     // clswpbon      = ~1 0 2~
     // hpclass       = ~HPFT~
     // numwslot      = ~2~
-    //clascolr      = ~182 182 136 184 142~
+    // clascolr      = ~182 182 136 184 142~
     // thiefscl      = ~100 100 100 100 100 100 100 0~
     // backstab      = ~1 2 2 2 2 3 3 3 3 4 4 4 4 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5~
     // sneakatt      = ~1 1 1 1 2 2 2 2 3 3 3 3 4 4 4 4 5 5 5 5 6 6 6 6 7 7 7 7 8 8 8 8 9 9 9 9 10 10 10 10 11~
     // crippstr      = ~0 0 0 0 0 1 1 1 1 2 2 2 2 3 3 3 3 4 4 4 4 5 5 5 5 6 6 6 6 7 7 7 7 8 8 8 8 9 9 9 9~
-    //thiefskl      = ~40 20~
+    // thiefskl      = ~40 20~
     // traplimt      = ~6~
-    //bdstweap      = ~LEAT05 * HELM01 * RING06 * * * * BRAC09 BELT02 AROW02,40 DART02,40 DART03,20 POTN08,5 POTN17,3 * DAGG02 SW1H08 STAF02~
+    // bdstweap      = ~LEAT05 * HELM01 * RING06 * * * * BRAC09 BELT02 AROW02,40 DART02,40 DART03,20 POTN08,5 POTN17,3 * DAGG02 SW1H08 STAF02~
   RET
     kit_id
 END
