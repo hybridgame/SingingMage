@@ -1,0 +1,12 @@
+IF
+    Global("AddKitD#T","LOCALS",0)
+    InParty(Myself)
+    !Kit(Myself,D#T)
+THEN
+    RESPONSE #100
+        SetInterrupt(FALSE)
+        AddKit(D#T)
+        ChangeStat(Myself,CON,16,SET)
+        SetGlobal("AddKitD#T","LOCALS",1)
+        SetInterrupt(TRUE)
+END
