@@ -1,7 +1,7 @@
 IF
-	Global("SMageBardSong","GLOBAL",0)
+	Global("D#TSONG","LOCALS",0)
 THEN
 	RESPONSE #100
-		SetGlobal("SMageBardSong","GLOBAL",1)
+		SetGlobal("D#TSONG","LOCALS",1)
 		ApplySpellRES("D#T3",Myself)
 END

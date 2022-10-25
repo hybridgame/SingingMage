@@ -1,3 +1,6 @@
+// 2022-10-25
+// + Dancing Thrower: APR like a fighter
+//
 // 2022-10-16
 // + Add Dancing Thrower bard kit
 //
@@ -20,13 +23,13 @@
 
 BACKUP ~s#mage/backup~
 AUTHOR ~hybridgame~
-VERSION "20221016"
+VERSION "2022-10-25"
 
 LANGUAGE    ~Korean~
             ~Korean~
             ~s#mage/Language/setupko.tra~
 
-BEGIN @1
+BEGIN ~Singing Mage Mage/Thief Kit~
 INCLUDE "s#mage/lib/a7#add_kit_ex.tpa"
 
 COPY ~s#mage/2da/s#mage.2da~ ~override~
@@ -38,7 +41,7 @@ LAF ADD_KIT_EX
     lower         = RESOLVE_STR_REF(@3)
     help          = RESOLVE_STR_REF(@4)
     // EE-specific arguments
-    briefdesc     = RESOLVE_STR_REF(@4)
+    briefdesc     = RESOLVE_STR_REF(@2)
   STR_VAR
     kit_name      = ~s#mage~
     unusable      = ~0x00080000~
@@ -92,7 +95,7 @@ COPY ~s#mage/spl/s#mage1.spl~ ~override~    // Change script (race)
      ~s#mage/spl/s#mage2.spl~ ~override~    // Protection from maze, always casting/theiving
      ~s#mage/spl/s#mage3.spl~ ~override~    // Bard song
 
-BEGIN @11 DESIGNATED "1"
+BEGIN ~Dancing Thrower Bard Kit~ DESIGNATED "1"
 INCLUDE "s#mage/lib/fl#add_kit_ee.tpa"
 
 // Add kit.
@@ -159,9 +162,9 @@ ADD_KIT ~d#t~
 // Kit detail.
 LAF fl#add_kit_ee
     STR_VAR
-        kit_name = ~d#t~
-        hpclass = ~HPROG~
-        numwslot = ~4~
+        kit_name  = ~d#t~
+        hpclass   = ~HPROG~
+        numwslot  = ~4~
 END
 
 COMPILE ~s#mage/baf/d#t.baf~
@@ -170,15 +173,16 @@ COPY ~s#mage/2da/lud#t.2da~ ~override~
      ~s#mage/spl/d#t1.spl~ ~override~ // Change script (race)
      ~s#mage/spl/d#t2.spl~ ~override~ // Protection from maze, always casting, diable theiving
      ~s#mage/spl/d#t3.spl~ ~override~ // Bard song
+     ~s#mage/spl/d#t4.spl~ ~override~ // +0.5 APR
 
-BEGIN @21
-REQUIRE_COMPONENT "setup-s#mage.tp2" "1" @15
-REQUIRE_PREDICATE GAME_IS ~bgee~ @22
+BEGIN ~Dancing Thrower Garrick~
+REQUIRE_COMPONENT "setup-s#mage.tp2" "1" ~Dancing Thrower Kit Required~
+REQUIRE_PREDICATE GAME_IS ~bgee~ ~Baldur's Gate EE Required~
 
 EXTEND_BOTTOM ~GARRICK.BCS~ ~s#mage/baf/npc.baf~
 
-BEGIN @31
-REQUIRE_COMPONENT "setup-s#mage.tp2" "1" @15
-REQUIRE_PREDICATE GAME_IS ~bg2ee~ @32
+BEGIN ~Dancing Thrower Haer'Dalis~
+REQUIRE_COMPONENT "setup-s#mage.tp2" "1" ~Dancing Thrower Kit Required~
+REQUIRE_PREDICATE GAME_IS ~bg2ee~ ~Baldur's Gate 2 EE Required~
 
 EXTEND_BOTTOM ~HAERDALI.BCS~ ~s#mage/baf/npc.baf~

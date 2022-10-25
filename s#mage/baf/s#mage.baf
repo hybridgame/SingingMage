@@ -1,7 +1,7 @@
 IF
-	Global("SMageBardSong","GLOBAL",0)
+	Global("S#MSONG","LOCALS",0)
 THEN
 	RESPONSE #100
-		SetGlobal("SMageBardSong","GLOBAL",1)
-		ApplySpellRES("S#MAGE3",Myself)  // 싱잉 메이지 바드송
+		SetGlobal("S#MSONG","LOCALS",1)
+		ApplySpellRES("S#MAGE3",Myself)
 END
