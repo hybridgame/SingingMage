@@ -1,33 +1,8 @@
-// 2022-10-25
-// + Dancing Thrower: APR like a fighter
-//
-// 2022-10-16
-// + Add Dancing Thrower bard kit
-//
-// 2019-10-24
-// * can choose the singing mage kit at the mage/thief class
-//
-// 2019-10-21
-// - remove +1 APR
-// - remove +1 to hit and damage rolls per 6 level (start at 1 level)
-// - remove spear slot at character creation
-//
-// 2019-10-05
-// * change bard song level (1, 10, 13, 16)
-// + +1 to hit and damage rolls per 6 level (start at 1 level)
-// + two weapon style and spear at character creation
-// - remove singing mage custom items
-//
-// 2019-06-08
-// + Create git: https://github.com/hybridgame/SingingMage
-
 BACKUP ~s#mage/backup~
 AUTHOR ~hybridgame~
 VERSION "2022-10-25"
 
-LANGUAGE    ~Korean~
-            ~Korean~
-            ~s#mage/Language/setupko.tra~
+LANGUAGE  ~Korean~  ~Korean~  ~s#mage/Language/setupko.tra~
 
 BEGIN ~Singing Mage Mage/Thief Kit~
 INCLUDE "s#mage/lib/a7#add_kit_ex.tpa"
