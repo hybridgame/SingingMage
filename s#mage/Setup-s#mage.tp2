@@ -16,7 +16,7 @@ LAF ADD_KIT_EX
     lower         = RESOLVE_STR_REF(@3)
     help          = RESOLVE_STR_REF(@4)
     // EE-specific arguments
-    briefdesc     = RESOLVE_STR_REF(@2)
+    //briefdesc     = RESOLVE_STR_REF(@2)
   STR_VAR
     kit_name      = ~s#mage~
     unusable      = ~0x00080000~

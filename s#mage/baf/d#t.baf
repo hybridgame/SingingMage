@@ -1,4 +1,14 @@
 IF
+	Global("TakeImportItems","MYAREA",1)
+	Global("D#TSONG_BG2","LOCALS",0)
+THEN
+	RESPONSE #100
+		SetGlobal("D#TSONG_BG2","LOCALS",1)
+		SetGlobal("D#TSONG","LOCALS",1)
+		ApplySpellRES("D#T3",Myself)
+END
+
+IF
 	Global("D#TSONG","LOCALS",0)
 THEN
 	RESPONSE #100
