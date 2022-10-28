@@ -10,14 +10,3 @@ THEN
         SetGlobal("AddKitD#T","LOCALS",1)
         SetInterrupt(TRUE)
 END
-
-IF
-    Global("AddKitD#T","LOCALS",1)
-THEN
-    RESPONSE #100
-        SetInterrupt(FALSE)
-		ApplySpellRES("D#T3",Myself)
-        SetGlobal("AddKitD#T","LOCALS",2)
-        SetGlobal("D#TSONG","LOCALS",1)
-        SetInterrupt(TRUE)
-END

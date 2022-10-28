@@ -1,3 +1,7 @@
+2022-10-29
+* 바드 송 구현을 스펠을 다시 시전하는 방식에서 Cast Spell on Condition으로 변경
+- 미로 면역 제거
+
 2022-10-25
 + Dancing Thrower: APR like a fighter
 
