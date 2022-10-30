@@ -1,6 +1,6 @@
 BACKUP ~s#mage/backup~
 AUTHOR ~hybridgame~
-VERSION "2022-10-29"
+VERSION "2022-10-30"
 
 LANGUAGE  ~Korean~  ~Korean~  ~s#mage/Language/setupko.tra~
 

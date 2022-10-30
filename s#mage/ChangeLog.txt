@@ -1,26 +1,29 @@
+2022-10-30
+- 바드 송이 작동 될 때 이전 바드 송을 제거하는 방식으로 변경되어 중첩되지 않고 단 하나의 바드 송만 작동됨
+
 2022-10-29
-* 바드 송 구현을 스펠을 다시 시전하는 방식에서 Cast Spell on Condition으로 변경
+- 바드 송 구현을 스펠을 다시 시전하는 방식에서 Cast Spell on Condition으로 변경
 - 미로 면역 제거
 
 2022-10-25
-+ Dancing Thrower: APR like a fighter
+- 댄싱 쓰로워가 파이터 처럼 레벨에 따른 공격 횟수 추가
 
 2022-10-16
-+ Add Dancing Thrower bard kit
+- 댄싱 쓰로워 바드 키트 추가
 
 2019-10-24
-* can choose the singing mage kit at the mage/thief class
+- 싱잉 메이지 키트를 메이지/시프 키트로 변경
 
 2019-10-21
-- remove +1 APR
-- remove +1 to hit and damage rolls per 6 level (start at 1 level)
-- remove spear slot at character creation
+- +1 APR 제거
+- 1레벨 부터 6레벨 당 +1 데미지, +1 THAC0 제거
+- 창 익힐 수 없게 변경
 
 2019-10-05
-* change bard song level (1, 10, 13, 16)
-+ +1 to hit and damage rolls per 6 level (start at 1 level)
-+ two weapon style and spear at character creation
-- remove singing mage custom items
+- 바드 송이 1, 10, 13, 16레벨에 강화된다.
+- 1레벨 부터 6레벨 당 +1 데미지, +1 THAC0
+- 쌍수 무기 스타일을 전문화하고 창을 익힐 수 있다.
+- 싱잉 메이지 전용 아이템 제거
 
 2019-06-08
-+ Create git: https://github.com/hybridgame/SingingMage
+- Create git: https://github.com/hybridgame/SingingMage
