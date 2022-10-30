@@ -1,6 +1,6 @@
 BACKUP ~s#mage/backup~
 AUTHOR ~hybridgame~
-VERSION "2022-10-30"
+VERSION "2022-10-31"
 
 LANGUAGE  ~Korean~  ~Korean~  ~s#mage/Language/setupko.tra~
 
@@ -150,10 +150,10 @@ BEGIN ~Dancing Thrower Garrick~
 REQUIRE_COMPONENT "setup-s#mage.tp2" "1" ~Dancing Thrower Kit Required~
 REQUIRE_PREDICATE GAME_IS ~bgee~ ~Baldur's Gate EE Required~
 
-EXTEND_BOTTOM ~GARRICK.BCS~ ~s#mage/baf/npc.baf~
+EXTEND_BOTTOM ~GARRICK.BCS~ ~s#mage/baf/GARRICK.baf~
 
 BEGIN ~Dancing Thrower Haer'Dalis~
 REQUIRE_COMPONENT "setup-s#mage.tp2" "1" ~Dancing Thrower Kit Required~
 REQUIRE_PREDICATE GAME_IS ~bg2ee~ ~Baldur's Gate 2 EE Required~
 
-EXTEND_BOTTOM ~HAERDALI.BCS~ ~s#mage/baf/npc.baf~
+EXTEND_BOTTOM ~HAERDALI.BCS~ ~s#mage/baf/HAERDALI.baf~
