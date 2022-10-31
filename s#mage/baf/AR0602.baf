@@ -1,0 +1,59 @@
+IF
+    Exists(Player1)
+    Kit(Player1,D#T)
+    Global("Player1D#T","MYAREA",0)
+THEN
+    RESPONSE #100
+        ActionOverride(Player1,ApplySpellRES("D#T01",Myself))
+        SetGlobal("Player1D#T","MYAREA",1)
+END
+
+IF
+    Exists(Player2)
+    Kit(Player2,D#T)
+    Global("Player2D#T","MYAREA",0)
+THEN
+    RESPONSE #100
+        ActionOverride(Player2,ApplySpellRES("D#T01",Myself))
+        SetGlobal("Player2D#T","MYAREA",1)
+END
+
+IF
+    Exists(Player3)
+    Kit(Player3,D#T)
+    Global("Player3D#T","MYAREA",0)
+THEN
+    RESPONSE #100
+        ActionOverride(Player3,ApplySpellRES("D#T01",Myself))
+        SetGlobal("Player3D#T","MYAREA",1)
+END
+
+IF
+    Exists(Player4)
+    Kit(Player4,D#T)
+    Global("Player4D#T","MYAREA",0)
+THEN
+    RESPONSE #100
+        ActionOverride(Player4,ApplySpellRES("D#T01",Myself))
+        SetGlobal("Player4D#T","MYAREA",1)
+END
+
+IF
+    Exists(Player5)
+    Kit(Player5,D#T)
+    Global("Player5D#T","MYAREA",0)
+THEN
+    RESPONSE #100
+        ActionOverride(Player5,ApplySpellRES("D#T01",Myself))
+        SetGlobal("Player5D#T","MYAREA",1)
+END
+
+IF
+    Exists(Player6)
+    Kit(Player6,D#T)
+    Global("Player6D#T","MYAREA",0)
+THEN
+    RESPONSE #100
+        ActionOverride(Player6,ApplySpellRES("D#T01",Myself))
+        SetGlobal("Player6D#T","MYAREA",1)
+END

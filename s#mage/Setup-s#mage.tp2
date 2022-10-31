@@ -64,8 +64,7 @@ LAF ADD_KIT_EX
     kit_id
 END
 
-COPY ~s#mage/spl/s#mage1.spl~ ~override~    // Cast spell on condition
-     ~s#mage/spl/s#mage2.spl~ ~override~    // Protection from maze, always casting/theiving
+COPY ~s#mage/spl/s#mage1.spl~ ~override~    // Always casting/theiving, Cast spell on condition
      ~s#mage/spl/s#mage3.spl~ ~override~    // Bard song
 
 BEGIN ~Dancing Thrower Bard Kit~ DESIGNATED "1"
@@ -141,10 +140,11 @@ LAF fl#add_kit_ee
 END
 
 COPY ~s#mage/2da/lud#t.2da~ ~override~
-     ~s#mage/spl/d#t1.spl~ ~override~ // Cast spell on condition
-     ~s#mage/spl/d#t2.spl~ ~override~ // Protection from maze, always casting, diable theiving
-     ~s#mage/spl/d#t3.spl~ ~override~ // Bard song
-     ~s#mage/spl/d#t4.spl~ ~override~ // +0.5 APR
+     ~s#mage/spl/d#t01.spl~ ~override~ // Always casting, diable theiving, Cast spell on condition
+     ~s#mage/spl/d#t03.spl~ ~override~ // Bard song
+     ~s#mage/spl/d#t04.spl~ ~override~ // +0.5 APR
+
+EXTEND_BOTTOM ~AR0602.BCS~ ~s#mage/baf/AR0602.baf~
 
 BEGIN ~Dancing Thrower Garrick~
 REQUIRE_COMPONENT "setup-s#mage.tp2" "1" ~Dancing Thrower Kit Required~
