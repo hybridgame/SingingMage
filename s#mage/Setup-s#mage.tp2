@@ -144,7 +144,14 @@ COPY ~s#mage/2da/lud#t.2da~ ~override~
      ~s#mage/spl/d#t03.spl~ ~override~ // Bard song
      ~s#mage/spl/d#t04.spl~ ~override~ // +0.5 APR
 
-EXTEND_BOTTOM ~AR0602.BCS~ ~s#mage/baf/AR0602.baf~
+ACTION_IF GAME_IS ~bgee eet~
+BEGIN
+    EXTEND_BOTTOM ~AR2600.BCS~ ~s#mage/baf/D#T.baf~
+END
+ACTION_IF GAME_IS ~bg2ee~
+BEGIN
+    EXTEND_BOTTOM ~AR0602.BCS~ ~s#mage/baf/D#T.baf~
+END
 
 BEGIN ~Dancing Thrower Garrick~
 REQUIRE_COMPONENT "setup-s#mage.tp2" "1" ~Dancing Thrower Kit Required~
